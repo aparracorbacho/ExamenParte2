@@ -2,31 +2,46 @@ package examenfinalparte2;
 
 public class Principal {
 
-    public static boolean p = false;
+    public static boolean mostrar = false;
 
     public static void main(String arg[]) {
-        int dig = 2;
-        int ndig = 0;
-        if (dig <= 0) {
+        /*
+        * cantidaddigitos corresponde a la cantidad de digitos maximo y minimo de los numeros que se van a mostrar
+        */
+        int cantidaddigitos = 2;
+        int cantidaddigitosmostrados = 0;
+        /*
+        * Si el numero de digitos a mostrar es menor que 0 mostramos mensaje de error ya que no mostrara nada el programa
+        */
+        if (cantidaddigitos <= 0) {
             System.out.println("Ingrese como parámetro, un numero de digitos correcto (mayor que 0): ");
         }
+        /*
+        * Comenzamos un for para recorrer un maximo de 99999 numeros
+        */
         for (int i = 1; i <= 99999; i++) {
             int aux = i;
-
-            int contador = 0;
-
-            while (aux != 0) {
-                aux = aux / 10;
-                contador++;
-            }
-            ndig = contador;
-
-            if (ndig == dig) {
+            
+            /*
+            * Llamamos al metodo contador de la clase metodos y le pasamos la variable aux
+            */
+            cantidaddigitosmostrados = metodos.contador(aux);
+            
+            /*
+            * Si el numero de digitos que se van a mostrar es igual al numero de digitos que queremos
+            * @param mostrar será true para mostrar el numero generado
+            */
+                   
+            if (cantidaddigitosmostrados == cantidaddigitos) {
                 if (i < 4) {
-                    p = true;
+                    mostrar = true;
                 } else {
+                    /*
+                    * Si el numero de digitos que se van a mostrar es igual al numero de digitos que queremos
+                    * @param mostrar será true
+                    */
                     if (i % 2 == 0) {
-                        p = false;
+                        mostrar = false;
                     } else {
                         int contador1 = 0;
                         int i1 = 1;
@@ -46,12 +61,15 @@ public class Principal {
                         }
 
                         if (contador1 == 1) {
-                            p = true;
+                            mostrar = true;
                         }
                     }
                 }
-
-                if (p == true) {
+                
+                /*
+                * Si mostrar es true se mostrara el numero
+                */
+                if (mostrar == true) {
                     System.out.println(i);
                 }
             }
