@@ -13,12 +13,17 @@ public class Principal {
         */
         int cantidaddigitos = 0;
         int cantidaddigitosmostrados = 0;
+        
         /*
-        * Si el numero de digitos a mostrar es menor que 0 mostramos mensaje de error ya que no mostrara nada el programa
+        * Pedimos el numero de digitos que queremos
         */
         System.out.println("Introduce la cantidad de digitos de cada numero");
         Scanner cantidaddigitosTeclado = new Scanner(System.in);
         cantidaddigitos = cantidaddigitosTeclado.nextInt();
+        
+        /*
+        * Si el numero de digitos a mostrar es menor que 0 mostramos mensaje de error ya que no mostrara nada el programa
+        */
         if (cantidaddigitos <= 0) {
             System.out.println("Ingrese como parámetro, un numero de digitos correcto (mayor que 0): ");
         }
@@ -56,51 +61,8 @@ public class Principal {
                     * Si el numero del loop en el que estamos es impar y mayor que 3 entrara en el else    
                     */
                     } else {
-                        /*
-                        * Definimos una variable1 contador y la inicializamos en 0
-                        * 
-                        */
-                        int contador = 0;
-                        int variable1 = 1;
-                        /*
-                        * Creamos una variable variable2 que será igual al numero de loop menos 1 dividido entre dos
-                        */
-                        int variable2 = (i - 1) / 2;
-                        /*
-                        * Si la variable variable es divisible entre dos, le restamos uno
-                        */
-                        if (variable2 % 2 == 0) {
-                            variable2--;
-                        }
-                        
-                        /*
-                        * Si la variable variable1 es menor o igual que variable entramos en el while
-                        */
-                        while (variable1 <= variable2) {
-                            /*
-                            * Si el numero de loops es divisible entre id sumamos 1 al contador
-                            */
-                            if (i % variable1 == 0) {
-                                contador++;
-                            }
-                            /*
-                            * Sumamos dos a variable1
-                            */
-                            variable1 += 2;
-                            /*
-                            * Si el contador es igual a dos igualamos variable1 a variable mas uno
-                            */
-                            if (contador == 2) {
-                                variable1 = variable2 + 1;
-                            }
-                        }
-                        /*
-                        * Si el contador es 1, colocamos mostrar igual a true
-                        */
-                        if (contador == 1) {
-                            mostrar = true;
-                        }
-                    }
+                    
+                       mostrar = metodos.contador2(i);
                 }
                 
                 /*
@@ -113,4 +75,5 @@ public class Principal {
         }
     }
 
+}
 }
