@@ -7,6 +7,7 @@ public class Principal {
     public static void main(String arg[]) {
         /*
         * cantidaddigitos corresponde a la cantidad de digitos maximo y minimo de los numeros que se van a mostrar
+        * cantidaddigitosmostrados es una variable que inicializamos y que usaremos a lo largo del programa
         */
         int cantidaddigitos = 2;
         int cantidaddigitosmostrados = 0;
@@ -51,41 +52,41 @@ public class Principal {
                     */
                     } else {
                         /*
-                        * Definimos una variable contador y la inicializamos en 0
+                        * Definimos una variable1 contador y la inicializamos en 0
                         * 
                         */
                         int contador = 0;
-                        int i1 = 1;
+                        int variable1 = 1;
                         /*
-                        * Creamos una variable K que será igual al numero de loop menos 1 dividido entre dos
+                        * Creamos una variable variable2 que será igual al numero de loop menos 1 dividido entre dos
                         */
-                        int k = (i - 1) / 2;
+                        int variable2 = (i - 1) / 2;
                         /*
-                        * Si la variable K es divisible entre dos, le restamos uno
+                        * Si la variable variable es divisible entre dos, le restamos uno
                         */
-                        if (k % 2 == 0) {
-                            k--;
+                        if (variable2 % 2 == 0) {
+                            variable2--;
                         }
                         
                         /*
-                        * Si la variable il es menor o igual que k entramos en el while
+                        * Si la variable variable1 es menor o igual que variable entramos en el while
                         */
-                        while (i1 <= k) {
+                        while (variable1 <= variable2) {
                             /*
                             * Si el numero de loops es divisible entre id sumamos 1 al contador
                             */
-                            if (i % i1 == 0) {
+                            if (i % variable1 == 0) {
                                 contador++;
                             }
                             /*
-                            * Sumamos dos a il
+                            * Sumamos dos a variable1
                             */
-                            i1 += 2;
+                            variable1 += 2;
                             /*
-                            * Si el contador es igual a dos igualamos il a k mas uno
+                            * Si el contador es igual a dos igualamos variable1 a variable mas uno
                             */
                             if (contador == 2) {
-                                i1 = k + 1;
+                                variable1 = variable2 + 1;
                             }
                         }
                         /*
