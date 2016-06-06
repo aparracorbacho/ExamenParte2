@@ -1,19 +1,24 @@
 package examenfinalparte2;
 
+import java.util.Scanner;
+
 public class Principal {
 
     public static boolean mostrar = false;
 
     public static void main(String arg[]) {
         /*
-        * cantidaddigitos corresponde a la cantidad de digitos maximo y minimo de los numeros que se van a mostrar
+        * cantidaddigitos corresponde a la cantidad de digitos maximo y minimo de los numeros que se van a mostrar, inicializamos la variable
         * cantidaddigitosmostrados es una variable que inicializamos y que usaremos a lo largo del programa
         */
-        int cantidaddigitos = 2;
+        int cantidaddigitos = 0;
         int cantidaddigitosmostrados = 0;
         /*
         * Si el numero de digitos a mostrar es menor que 0 mostramos mensaje de error ya que no mostrara nada el programa
         */
+        System.out.println("Introduce la cantidad de digitos de cada numero");
+        Scanner cantidaddigitosTeclado = new Scanner(System.in);
+        cantidaddigitos = cantidaddigitosTeclado.nextInt();
         if (cantidaddigitos <= 0) {
             System.out.println("Ingrese como parámetro, un numero de digitos correcto (mayor que 0): ");
         }
