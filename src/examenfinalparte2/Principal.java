@@ -29,38 +29,69 @@ public class Principal {
             
             /*
             * Si el numero de digitos que se van a mostrar es igual al numero de digitos que queremos
-            * @param mostrar será true para mostrar el numero generado
+            * entrará en el if
             */
                    
             if (cantidaddigitosmostrados == cantidaddigitos) {
+                /*
+                * Si el numero de loop en el que nos encontramos es menor que 4
+                * @param mostrar será true y se mostrará el numero
+                */
                 if (i < 4) {
                     mostrar = true;
                 } else {
                     /*
-                    * Si el numero de digitos que se van a mostrar es igual al numero de digitos que queremos
-                    * @param mostrar será true
+                    * Si el numero de loop en el que estamos es divisible entre dos y mayor que 3
+                    * @param mostrar será false y no se mostrara ese numero
                     */
                     if (i % 2 == 0) {
                         mostrar = false;
+                    /*
+                    * Si el numero del loop en el que estamos es impar y mayor que 3 entrara en el else    
+                    */
                     } else {
-                        int contador1 = 0;
+                        /*
+                        * Definimos una variable contador y la inicializamos en 0
+                        * 
+                        */
+                        int contador = 0;
                         int i1 = 1;
+                        /*
+                        * Creamos una variable K que será igual al numero de loop menos 1 dividido entre dos
+                        */
                         int k = (i - 1) / 2;
+                        /*
+                        * Si la variable K es divisible entre dos, le restamos uno
+                        */
                         if (k % 2 == 0) {
                             k--;
                         }
-
+                        
+                        /*
+                        * Si la variable il es menor o igual que k entramos en el while
+                        */
                         while (i1 <= k) {
+                            /*
+                            * Si el numero de loops es divisible entre id sumamos 1 al contador
+                            */
                             if (i % i1 == 0) {
-                                contador1++;
+                                contador++;
                             }
+                            /*
+                            * Sumamos dos a il
+                            */
                             i1 += 2;
-                            if (contador1 == 2) {
+                            /*
+                            * Si el contador es igual a dos igualamos il a k mas uno
+                            */
+                            if (contador == 2) {
                                 i1 = k + 1;
                             }
                         }
-
-                        if (contador1 == 1) {
+                        /*
+                        * Si el contador es 1, colocamos mostrar igual a true
+                        */
+                        if (contador == 1) {
                             mostrar = true;
                         }
                     }
