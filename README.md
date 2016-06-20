@@ -1,7 +1,10 @@
 # ExFinalParte2
 
 Refactorizado el código y añade Javadoc
-Aunque no entiendo parte del codigo, si lo que hace pero no el conjunto del metodo contador2 el motivo
+El metodo Metodo.contador2(loop) se puede eliminar ya que siempre devuelve true dejando:
+mostrar = true;
+
+Comentamos algo mas del codigo
 
 Aaron Parra Corbacho
 NºAlumno 5419
